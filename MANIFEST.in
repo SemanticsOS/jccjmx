@@ -1,0 +1,6 @@
+recursive-include src *.java
+include CHANGES.txt
+include INSTALL.txt
+include README.txt
+include Makefile
+include build.xml
