@@ -15,7 +15,7 @@ setup_info = dict(
     name="jccjmx",
     version="0.1",
     description="Java Management Extension (JMX) wrapper for JCC",
-    long_description=open("README.txt").read(),
+    long_description=open("README.rst").read(),
     setup_requires=["JCC>=0.12", "PyLucene=>3.4"],
     author="semantics GmbH / Christian Heimes",
     author_email="c.heimes@semantics.de",
