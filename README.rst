@@ -66,7 +66,7 @@ delay the agent::
   >>> agent.isActive()
   False
 
-In order to connect from a remote host you need to know the service URL:
+In order to connect from a remote host you need to know the service URL::
 
   >>> agent.getServiceURL()
   u'service:jmx:rmi://127.0.0.1:12345/jndi/rmi://127.0.0.1:12345/jmxrmi'
