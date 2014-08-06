@@ -32,18 +32,18 @@ Usage
 =====
 
 The import order is crucial! You must import and init lucene and jccjmx
-in the correct order. Otherwise your process will segfault.::
+in the correct order. Otherwise your process will segfault::
 
             import lucene import jccjmx
 
 Initialize the VM for both packages. The second initVM() just adds the
-CLASSPATH of jccjmx.::
+CLASSPATH of jccjmx::
 
             lucene.initVM() # doctest: +ELLIPSIS jccjmx.initVM() #
             doctest: +ELLIPSIS
 
 Create an agent that listens on port 12345. You should create just one
-instane of JccJmxAgent during the life time of your application.::
+instane of JccJmxAgent during the life time of your application::
 
             agent = jccjmx.JccJmxAgent(12345)
 
@@ -52,7 +52,7 @@ hostname or IP address with jccjmx.JccJmxAgent("hostname", portnumber).
 
 A RMI is created immediately and bound to "\*:port" but no agent is
 listening yet. You have to activate is explicitly. This allows you to
-delay the agent.::
+delay the agent::
 
             agent.isActive() False agent.start() agent.isActive() True
             agent.stop() agent.isActive() False
